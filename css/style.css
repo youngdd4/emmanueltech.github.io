@@ -1,5 +1,16 @@
 /* ==== "Inter" FONT-FAMILY FROM FONTS.GOOGLE.COM  ==== */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+@import url(https://db.onlinewebfonts.com/c/d930760769788d4aaa8f4b153aed37ba?family=MarkForMC+Nrw);
+@font-face {
+    font-family: "MarkForMC Nrw";
+    src: url("https://db.onlinewebfonts.com/t/d930760769788d4aaa8f4b153aed37ba.eot");
+    src: url("https://db.onlinewebfonts.com/t/d930760769788d4aaa8f4b153aed37ba.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d930760769788d4aaa8f4b153aed37ba.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d930760769788d4aaa8f4b153aed37ba.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/d930760769788d4aaa8f4b153aed37ba.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d930760769788d4aaa8f4b153aed37ba.svg#MarkForMC Nrw")format("svg");
+}
+
 /* ==== ROOT RESET ==== */
 * {
   margin: 0;
@@ -29,6 +40,8 @@
 
 /* ==== RESET HTML ==== */
 body {
+	 font-family: MarkForMC Nrw;
+    color: #4e4e4e;
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
@@ -36,6 +49,16 @@ body {
 }
 ul li {
   list-style-type: none;
+}
+p{
+    font-family: MarkForMC Nrw;
+    color: #4e4e4e;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 300;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 a {
   text-decoration: none;
@@ -50,6 +73,34 @@ button {
 .container {
   width: 100%;
 }
+.group{
+	padding:2%;
+	margin:2%;
+}.group{
+	padding:1%;
+	margin:0;
+}
+.card2-contact{
+ background-color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    padding:5%;
+    margin:10%;
+}
+
 @media screen and (min-width: 1040px) {
   .container {
     width: 1040px;
@@ -382,6 +433,35 @@ footer {
     font-size: 19px;
   }
 }
+        form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 10px 0 5px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
 .footer-text{
 text-align: center;
 padding:5%;
