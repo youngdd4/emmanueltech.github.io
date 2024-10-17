@@ -1,6 +1,7 @@
 const navId = document.getElementById("nav_menu"),
   ToggleBtnId = document.getElementById("toggle_btn"),
-  CloseBtnId = document.getElementById("close_btn");
+  CloseBtnId = document.getElementById("close_btn"),
+  navLinks = document.querySelectorAll(".nav_menu_link"); // Get all nav menu links
 
 // ==== SHOW MENU ==== //
 ToggleBtnId.addEventListener("click", () => {
@@ -12,8 +13,32 @@ CloseBtnId.addEventListener("click", () => {
   navId.classList.remove("show");
 });
 
+// ==== Close menu when a nav item is clicked ==== //
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    navId.classList.remove("show");
+  });
+});
+
 // ==== Animate on Scroll Initialize  ==== //
 AOS.init();
+
+// Scroll to the top of the document when the button is clicked
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Show the button when the user scrolls down 20px from the top
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  const scrollUpBtn = document.getElementById("scrollUpBtn");
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    scrollUpBtn.style.display = "block";
+  } else {
+    scrollUpBtn.style.display = "none";
+  }
+}
 
 // ==== GSAP Animations ==== //
 // ==== LOGO  ==== //
